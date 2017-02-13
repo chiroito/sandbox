@@ -18,6 +18,8 @@
         <version.war.plugin>3.0.0</version.war.plugin>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <weblogic.user>weblogic</weblogic.user>
+        <weblogic.password>welcome1</weblogic.password>
     </properties>
 
     <modules>
