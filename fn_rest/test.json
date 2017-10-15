@@ -1,0 +1,28 @@
+{
+    "tests": [
+        {
+            "input": {
+                "body": {
+                    "name": "Bob"
+                }
+            },
+            "output": {
+                "body": {
+                    "salutation": "Hello Bob"
+                }
+            }
+        },
+        {
+            "input": {
+                "body": {
+                    "name": "Johnny"
+                }
+            },
+            "output": {
+                "body": {
+                    "salutation": "Hello Johnny"
+                }
+            }
+        }
+    ]
+}
