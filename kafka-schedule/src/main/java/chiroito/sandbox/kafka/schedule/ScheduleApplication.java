@@ -14,15 +14,17 @@ import org.springframework.scheduling.annotation.Scheduled;
 @EnableScheduling
 public class ScheduleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ScheduleApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(ScheduleApplication.class);
+        app.setWebEnvironment(false);
+        app.run(args);
+    }
 
-	@Autowired
-	Source source;
+    @Autowired
+    private Source source;
 
-	@Scheduled(fixedDelay = 5000)
-	void send() {
-		source.output().send(MessageBuilder.withPayload("Hello").build());
-	}
+    @Scheduled(fixedDelay = 5000)
+    void send() {
+        source.output().send(MessageBuilder.withPayload("Hello").build());
+    }
 }

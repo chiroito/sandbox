@@ -1,0 +1,7 @@
+{
+    "runtime": {
+        "majorVersion": "8"
+    },
+    "type": "worker",
+    "command": "java -jar ${project.build.finalName}.jar --spring.cloud.stream.kafka.binder.brokers=${OEHCS_EXTERNAL_CONNECT_STRING} --spring.cloud.stream.bindings.output.destination=${OEHCS_TOPIC}"
+}

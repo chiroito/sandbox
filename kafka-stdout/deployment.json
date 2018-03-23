@@ -1,0 +1,8 @@
+{
+    "services": [
+        {
+            "name": "ChiroitoTopic",
+            "type": "OEHCS"
+        }
+    ]
+}
