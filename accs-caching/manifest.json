@@ -1,0 +1,7 @@
+{
+    "runtime": {
+        "majorVersion": "8"
+    },
+    "type": "web",
+    "command": "java -Dcloud.cache.uri=http://${CACHING_INTERNAL_CACHE_URL}:8080/ccs/ -jar ${project.build.finalName}.jar"
+}
