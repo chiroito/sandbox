@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.ServerSocketChannel;
@@ -11,7 +12,7 @@ import java.nio.channels.SocketChannel;
  */
 public class FiberEchoServer {
 
-    public static void main(String... args) throws Exception {
+    public static void main(String... args) throws IOException {
 
         final ServerSocketChannel serverSocketChannel = ServerSocketChannel.open().bind(new InetSocketAddress(8080));
 
@@ -36,13 +37,13 @@ public class FiberEchoServer {
                             socketChannel.close();
 
                         } catch (IOException e) {
-                            throw new RuntimeException(e);
+                            throw new UncheckedIOException(e);
                         }
                     });
 
                 }
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                throw new UncheckedIOException(e);
             }
 
         });
